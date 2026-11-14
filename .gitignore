@@ -1,0 +1,11 @@
+.direnv/
+.venv/
+__pycache__/
+*.py[cod]
+db.sqlite3
+site/
+.DS_Store
+# Original reference files are kept locally; the cropped photos and logo live in static/.
+/*.pdf
+/eviespressons.jpg
+/*:Zone.Identifier
