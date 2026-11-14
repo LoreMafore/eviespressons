@@ -20,7 +20,7 @@ class HomepageTests(SimpleTestCase):
         call_command("export_site", verbosity=0)
         site = Path(settings.BASE_DIR) / "site"
         html = (site / "index.html").read_text()
-        self.assertIn('href="static/css/site.css"', html)
+        self.assertIn('href="static/css/site.css?v=3"', html)
         self.assertTrue((site / "static/images/pastel-3d.jpg").is_file())
         self.assertTrue((site / "static/images/burgundy-blue.jpg").is_file())
         self.assertTrue((site / ".nojekyll").is_file())
