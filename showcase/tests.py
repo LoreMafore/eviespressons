@@ -13,6 +13,8 @@ class HomepageTests(SimpleTestCase):
         self.assertContains(response, "Pastel daydream")
         self.assertContains(response, "Burgundy mood")
         self.assertContains(response, "https://www.instagram.com/eviespressons/")
+        self.assertNotContains(response, "✳")
+        self.assertContains(response, '<use href="#sparkle"/>')
 
     def test_static_export_contains_page_and_images(self):
         call_command("export_site", verbosity=0)

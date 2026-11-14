@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="{% static 'css/site.css' %}">
 </head>
 <body>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><symbol id="sparkle" viewBox="0 0 32 32"><path fill="currentColor" d="M16 0 19 10 26 4 22 13 32 16 22 19 26 28 19 22 16 32 13 22 6 28 10 19 0 16 10 13 6 4 13 10Z"/></symbol></svg>
   <div class="announcement">Made with love, worn with confidence <span aria-hidden="true">✦</span> Custom sets from $30</div>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Evie's Press Ons, back to top"><img src="{% static 'images/logo.jpg' %}" alt="" width="48" height="48"><span>evie's <em>press ons</em></span></a>
@@ -31,7 +32,7 @@
   <main id="top">
     <section class="hero section-wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> YOUR NAILS, YOUR LITTLE UNIVERSE</div>
+        <div class="eyebrow"><svg class="little-star" aria-hidden="true"><use href="#sparkle"/></svg> YOUR NAILS, YOUR LITTLE UNIVERSE</div>
         <h1 id="hero-title">A little art<br>at your <em>fingertips.</em></h1>
         <p>Custom press-on nails for the main character moments, the everyday moments, and everything in between.</p>
         <div class="hero-actions">
@@ -43,13 +44,13 @@
       <div class="hero-art">
         <div class="hero-backdrop"></div>
         <img class="hero-image" src="{% static 'images/pastel-3d.jpg' %}" alt="Pastel sculpted nail set with pink, mint, lavender, and playful 3D details" fetchpriority="high">
-        <div class="hero-sticker">cute nails<br><em>club</em> <span aria-hidden="true">✳</span></div>
+        <div class="hero-sticker">cute nails<br><em>club</em> <svg aria-hidden="true"><use href="#sparkle"/></svg></div>
         <div class="hero-sparkle" aria-hidden="true">✦</div>
         <div class="photo-label">THE PASTEL DAYDREAM SET <span>01 / 02</span></div>
       </div>
     </section>
 
-    <div class="marquee" aria-hidden="true"><span>tiny canvases, big energy <b>✳</b> made to be noticed <b>✳</b> tiny canvases, big energy <b>✳</b> made to be noticed <b>✳</b></span></div>
+    <div class="marquee" aria-hidden="true"><span>tiny canvases, big energy <b><svg><use href="#sparkle"/></svg></b> made to be noticed <b><svg><use href="#sparkle"/></svg></b> tiny canvases, big energy <b><svg><use href="#sparkle"/></svg></b> made to be noticed <b><svg><use href="#sparkle"/></svg></b></span></div>
 
     <section class="gallery section-wrap" id="gallery" aria-labelledby="gallery-title">
       <div class="section-heading">
@@ -60,7 +61,7 @@
         {% for set in sets %}
         <article class="look-card">
           <div class="look-image-wrap"><img src="{% static set.image %}" alt="{{ set.alt }}" loading="lazy"><span class="look-number">{{ set.number }} / 02</span></div>
-          <div class="look-caption"><div><h3>{{ set.name }}</h3><p>{{ set.detail }}</p></div><span class="look-icon" aria-hidden="true">✳</span></div>
+          <div class="look-caption"><div><h3>{{ set.name }}</h3><p>{{ set.detail }}</p></div><svg class="look-icon" aria-hidden="true"><use href="#sparkle"/></svg></div>
         </article>
         {% endfor %}
       </div>
@@ -70,7 +71,7 @@
     <section class="pricing" id="pricing" aria-labelledby="pricing-title">
       <div class="pricing-inner section-wrap">
         <div class="pricing-copy"><div class="eyebrow">GOOD NAILS, NO GUESSWORK</div><h2 id="pricing-title">Your dream set<br>starts <em>here.</em></h2><p>Every look begins with a base set. Want to make it even more you? Ask about add-ons when you message Evie.</p><a class="button button-primary" href="{{ instagram }}" target="_blank" rel="noopener noreferrer">Ask about your set <span aria-hidden="true">↗</span></a></div>
-        <div class="price-card"><span class="price-card-sparkle" aria-hidden="true">✳</span><span class="price-label">THE STARTING POINT</span><div class="price">$30<span> / base set</span></div><div class="price-rule"></div><p>Custom details & add-ons available</p><small>Final price depends on your design. DM for add-on options and a quote before ordering.</small></div>
+        <div class="price-card"><svg class="price-card-sparkle" aria-hidden="true"><use href="#sparkle"/></svg><span class="price-label">THE STARTING POINT</span><div class="price">$30<span> / base set</span></div><div class="price-rule"></div><p>Custom details & add-ons available</p><small>Final price depends on your design. DM for add-on options and a quote before ordering.</small></div>
       </div>
     </section>
 
@@ -80,6 +81,6 @@
       <a class="button button-primary" href="{{ instagram }}" target="_blank" rel="noopener noreferrer">DM @eviespressons <span aria-hidden="true">↗</span></a>
     </section>
   </main>
-  <footer><div class="section-wrap footer-inner"><a class="brand" href="#top"><img src="{% static 'images/logo.jpg' %}" alt="" width="44" height="44"><span>evie's <em>press ons</em></span></a><p>Little works of art, made for you. ✳</p><a href="{{ instagram }}" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></footer>
+  <footer><div class="section-wrap footer-inner"><a class="brand" href="#top"><img src="{% static 'images/logo.jpg' %}" alt="" width="44" height="44"><span>evie's <em>press ons</em></span></a><p>Little works of art, made for you. <svg class="footer-sparkle" aria-hidden="true"><use href="#sparkle"/></svg></p><a href="{{ instagram }}" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></footer>
 </body>
 </html>
