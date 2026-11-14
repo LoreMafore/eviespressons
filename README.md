@@ -1,5 +1,7 @@
 # Evie's Press Ons
 
+[GitHub repository](https://github.com/LoreMafore/eviespressons) · [Live website](https://loremafore.github.io/eviespressons/)
+
 A small Django lookbook for custom press-on nails. The site uses Evie's supplied logo and nail photos. Sets start at **$30**, with add-ons quoted through [@eviespressons on Instagram](https://www.instagram.com/eviespressons/).
 
 ## Run locally
